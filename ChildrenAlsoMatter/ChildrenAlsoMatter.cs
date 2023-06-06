@@ -47,7 +47,13 @@ namespace ChildrenAlsoMatter
         static Type FirstGeneric(Type last)
         {
             var generics = last.GetGenericArguments();
-            if (generics != null && generics.Length > 0) return generics[0];
+            if (generics != null && generics.Length > 0) 
+            {
+                foreach (var generic in generics)
+                {
+                    if(typeof(Delegate).IsAssignableFrom(generic)) return generic;
+                }
+            }
             var baseType = last.BaseType;
             if (baseType != null) return FirstGeneric(baseType);
             return null;
