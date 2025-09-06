@@ -1,3 +1,6 @@
+no types that this was needed for exist anymore.
+
+
 # ChildrenAlsoMatter
 
 A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that fixes DelegateEditor for classes that are not directly a generic type of some delegate but inheret from a class that is. eg: Impulse
